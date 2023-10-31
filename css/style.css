@@ -205,10 +205,25 @@ color: #fff;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
 }
-
 .main-nav li a:hover{
 	text-decoration:none;
 	color: #7cc576;
+}
+.main-nav li a.current {
+  text-decoration:none;
+  position: relative;
+}
+.main-nav li a.current:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #4CAF50;
 }
 
 .small-logo{
@@ -840,6 +855,31 @@ border: 2px solid #fff;
 	max-width: 1140px;
 }
 
+#chat-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+#chat-box {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    /* background-color: black; */
+    background: transparent;
+}
+#chat-iframe {
+    border: none;
+}
+#close-btn {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.hidden {
+    display: none;
+}
 
 /* Animation Timers
 ---------------------------------*/
