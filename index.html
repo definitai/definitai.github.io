@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+	<title>definitAI</title>
+  <link rel="icon" href="img/logo_bg.png" />
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+  <div style="overflow:hidden;">
+		<header class="header" id="">
+			<div class="">
+				<figure class="logo animated fadeInDown delay-07s">
+					<a href="#"><img src="img/logo.png" alt="" style="border-radius:50%;"></a>
+				</figure>
+				<h1 class="animated fadeInDown delay-07s" style="font-family:monospace">DefinitAI</h1>
+				<ul class="we-create animated fadeInUp delay-1s">
+					<li>Discover Unlimited Business Potential with<br>
+						<strong>Generative AI</strong>,
+						<strong>Search</strong>, and
+						<strong>Recommendation</strong>.</li>
+				</ul>
+				<!-- <p class="slogan animated fadeInUp delay-1s">Discover Unlimited Business Potential with <br>GENERATIVE AI, SEARCH, and RECOMMENDATION.</p> -->
+				<a class="get-started-btn animated fadeInUp delay-1s" href="https://learn.definitai.com">Explore Sample App</a>
+			</div>
+		</header>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#test').scrollToFixed();
+
+			$('.get-started-btn').click(function(event) {
+				event.preventDefault();
+				var target = $($(this).attr('href'));
+
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1500, 'easeInOutExpo');
+				}
+			});
+
+			$('.res-nav_click').click(function(){
+				$('.main-nav').slideToggle();
+				return false;
+			});
+		});
+
+		wow = new WOW({
+			animateClass: 'animated',
+			offset: 100
+		});
+		wow.init();
+
+		$(window).load(function(){
+			var $portfolioContainer = $('.portfolioContainer');
+			var $serviceContainer = $('.serviceContainer');
+
+			$portfolioContainer.isotope({
+				filter: '.aboutus'
+			});
+
+			$serviceContainer.isotope({
+				filter: '.service'
+			});
+
+			$('.portfolioFilter a').click(function(){
+				$('.portfolioFilter .current').removeClass('current');
+				$(this).addClass('current');
+
+				var selector = $(this).attr('data-filter');
+				$portfolioContainer.isotope({
+					filter: selector,
+				});
+				return false;
+			});
+
+			$('.serviceFilter a').click(function(){
+				$('.serviceFilter .current').removeClass('current');
+				$(this).addClass('current');
+
+				var selector = $(this).attr('data-filter');
+				$serviceContainer.isotope({
+					filter: selector,
+				});
+				return false;
+			});
+
+			$(window).on("scroll", function() {
+			    var scrollPos = $(window).scrollTop();
+			    $('.main-nav li a').each(function() {
+			        var currLink = $(this);
+			        var refElement = $(currLink.attr("href"));
+							if (currLink.attr("href") == '#header') {
+			            return true;
+			        }
+			        if (refElement.position().top - 204 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+			            $('.main-nav li a').removeClass("current");
+			            currLink.addClass("current");
+			        } else {
+			            currLink.removeClass("current");
+			        }
+			    });
+			});
+
+
+			$('.main-nav li a').bind('click', function(event) {
+				var $anchor = $(this);
+
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top - 102
+				}, 1500, 'easeInOutExpo');
+				event.preventDefault();
+			});
+
+			var $body = $('body'),
+			colW = 375,
+			columns = null;
+
+			$(window).smartresize(function() {
+				var currentColumns = Math.floor(($body.width() - 30) / colW);
+				if (currentColumns !== columns) {
+					columns = currentColumns;
+					$portfolioContainer.width(columns * colW).isotope('reLayout');
+					$serviceContainer.width(columns * colW).isotope('reLayout');
+				}
+			}).smartresize();
+		});
+
+
+	</script>
+
+</body>
+</html>
