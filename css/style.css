@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+/* Header */
+.header {
+    text-align: center;
+    background: url(../img/pw_maze_black_2X.png) left top repeat;
+    padding: 20vh 0;
+    height: 100vh;
+}
+
+.logo {
+    width: 130px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+    color: #fff;
+}
+
+/* Text Styling */
+.we-create {
+    padding: 0;
+    margin: 35px 0 55px;
+}
+
+.we-create li {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #bcbcbc;
+    font-weight: 400;
+    margin-right: 5px;
+    padding-left: 15px;
+    line-height: 1.6;
+}
+
+.slogan {
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.get-started-btn {
+    padding: 15px 35px;
+    background: #7cc576;
+    color: #fff !important;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    border-radius: 3px;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.get-started-btn:hover {
+    color: #7cc576 !important;
+    background: #fff;
+}
+
+.get-started-btn:active,
+.get-started-btn:focus {
+    background: #7cc576;
+    color: #fff !important;
+}
+
+/* Portfolio & Services */
+.Portfolio-nav,
+.service-nav {
+    text-align: center;
+    list-style: none;
+    margin-bottom: 45px;
+}
+
+.Portfolio-nav li,
+.service-nav li {
+    margin: 0 10px;
+    display: inline;
+}
+
+.Portfolio-nav li a,
+.service-nav li a {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #222;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    background: #f7f7f7;
+    transition: all 0.3s ease-in-out;
+}
+
+.Portfolio-nav li a:hover,
+.service-nav li a:hover,
+.Portfolio-nav li a.current,
+.service-nav li a.current {
+    background: #7cc576;
+    color: #fff;
+    text-decoration: none;
+}
+
+.portfolioContainer,
+.serviceContainer {
+    margin: 0 auto;
+    padding-left: 15px;
+    max-width: 1140px;
+}
+
+/* Portfolio Images */
+.Portfolio-box img {
+    margin-bottom: 25px;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+.Portfolio-box img:hover {
+    opacity: 0.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navigation */
+.res-nav_click:hover,
+.res-nav_click:active,
+.res-nav_click:focus {
+    color: #7cc576 !important;
+}
+
+/* Chat Widget */
+#chat-button,
+#chat-box {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#chat-box {
+    background: transparent;
+}
+
+#chat-iframe {
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animation Timers */
+.delay-1s { animation-delay: 1s; }
+.delay-02s { animation-delay: 0.2s; }
+.delay-03s { animation-delay: 0.3s; }
+.delay-04s { animation-delay: 0.4s; }
+.delay-05s { animation-delay: 0.5s; }
+.delay-06s { animation-delay: 0.6s; }
+.delay-07s { animation-delay: 0.7s; }
+.delay-08s { animation-delay: 0.8s; }
+.delay-09s { animation-delay: 0.9s; }
+.delay-12s { animation-delay: 1.2s; }
